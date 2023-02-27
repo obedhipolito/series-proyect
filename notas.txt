@@ -1,0 +1,25 @@
+José Obed Mariano Hipólito
+series:
+app: producciones
+class: Produnccion
+
+-nombre: TextField(default",blank=flase)
+-temporadas: integerfield(default=0,blank=false)
+-capitulos: integerfield(default=0,blank=false)
+-duracion: TimeField(default=0)
+-clasificacion: TextField(default",blank=flase)
+-categoria: TextField(default",blank=flase)
+-idioma: TextField(default",blank=flase)
+-plataforma: TextField(default",blank=flase)
+-director: TextField(default",blank=flase)
+-protagonista: TextField(default",blank=flase)
+
+python3 manage.py startapp producciones
+
+python3 manage.py makemigrations --settings=settings.local
+python3 manage.py migrate --settings=settings.local
+python3 manage.py runserver --settings=settings.local
+
+python3 manage.py shell --settings=settings.local
+from producciones.models import Produccion
+Produccion.objects.create(nombre='los simpson', temporadas=32, capitulos=706, duracion=21180, clasificacion='mayores de 14 años', categoria='comedia', idioma='español e ingles', plataforma='start +', director='Matt Groening', protagonista='homero simpson')
