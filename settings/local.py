@@ -126,5 +126,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 GRAPHENE = {
-    'SCHEMA': 'hackernews.schema.schema',
+    'SCHEMA': 'series.schema.schema',
 }
