@@ -65,3 +65,5 @@ class CreateProduccion(graphene.Mutation):
 #4
 class Mutation(graphene.ObjectType):
     create_producciones = CreateProduccion.Field()
+
+schema = graphene.Schema(query=Query, mutation=Mutation)
