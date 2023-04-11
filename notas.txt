@@ -20,6 +20,7 @@ python3 manage.py startapp producciones
 python3 manage.py makemigrations --settings=settings.local
 python3 manage.py migrate --settings=settings.local
 python3 manage.py runserver --settings=settings.local
+python3 manage.py test --settings=settings.local -v 3 --keepdb
 
 python3 manage.py shell --settings=settings.local
 from producciones.models import Produccion
