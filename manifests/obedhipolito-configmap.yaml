@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
- name: obedhipolito-config
+ name: obedhipolito-configmap
  labels:
    app: postgres
 data:
