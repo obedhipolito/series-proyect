@@ -7,3 +7,4 @@ COPY requirements.txt /series/
 RUN pip install -r requirements.txt
 COPY . /series/
 CMD python3 manage.py runserver --settings=settings.production 0.0.0.0:8080
+RUN python3 manage.py makemigration --settings=settings.production 0.0.0.0:8080
