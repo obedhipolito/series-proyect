@@ -73,28 +73,38 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'series.wsgi.application'
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'series_develop',
+        'USER': 'obedhipolito',
+        'PASSWORD': 'jose0710',
+        'HOST': 'localhost',
+        'PORT': '5432'
+    }
+}
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-PROD_DATABASE = config("PROD_DATABASE", default='')
-PROD_USER = config("PROD_USER", default='')
-PROD_PASSWORD = config("PROD_PASSWORD", default='')
-PROD_HOST = config("PROD_HOST", default='')
-PROD_PORT = config("PROD_PORT", default=5432)
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': PROD_DATABASE,
-        'USER': PROD_USER,
-        'PASSWORD': PROD_PASSWORD,
-        'HOST': PROD_HOST,
-        'PORT': PROD_PORT,
-        #'TEST': {
-        #    'NAME': TEST_DATABASE,
-        #},
-    },
-}
+#PROD_DATABASE = config("PROD_DATABASE", default='')
+#PROD_USER = config("PROD_USER", default='')
+#PROD_PASSWORD = config("PROD_PASSWORD", default='')
+#PROD_HOST = config("PROD_HOST", default='')
+#PROD_PORT = config("PROD_PORT", default=5432)
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#        'NAME': PROD_DATABASE,
+#       'USER': PROD_USER,
+#        'PASSWORD': PROD_PASSWORD,
+#        'HOST': PROD_HOST,
+#        'PORT': PROD_PORT,
+#        #'TEST': {
+#        #    'NAME': TEST_DATABASE,
+#        #},
+#    },
+#}
 
 
 #DATABASES = {

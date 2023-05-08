@@ -28,6 +28,7 @@ class CreateProduccion(graphene.Mutation):
     plataforma = graphene.String()
     director = graphene.String()
     protagonista = graphene.String()
+    resena = graphene.String()
 
     #2
     class Arguments:
@@ -41,10 +42,11 @@ class CreateProduccion(graphene.Mutation):
         plataforma = graphene.String()
         director = graphene.String()
         protagonista = graphene.String()
+        resena = graphene.String()
 
     #3
-    def mutate(self, info, nombre, temporadas, capitulos, duracion, clasificacion, categoria, idioma,plataforma, director, protagonista):
-        produciones = Produccion(nombre=nombre, temporadas=temporadas, capitulos=capitulos, duracion=duracion, clasificacion=clasificacion, categoria=categoria, idioma=idioma,plataforma=plataforma, director=director, protagonista=protagonista)
+    def mutate(self, info, nombre, temporadas, capitulos, duracion, clasificacion, categoria, idioma,plataforma, director, protagonista, resena):
+        produciones = Produccion(nombre=nombre, temporadas=temporadas, capitulos=capitulos, duracion=duracion, clasificacion=clasificacion, categoria=categoria, idioma=idioma,plataforma=plataforma, director=director, protagonista=protagonista, resena=resena)
         produciones.save()
 
         return CreateProduccion(
@@ -58,7 +60,8 @@ class CreateProduccion(graphene.Mutation):
             idioma=produciones.idioma,
             plataforma=produciones.plataforma,
             director=produciones.director,
-            protagonista=produciones.protagonista
+            protagonista=produciones.protagonista,
+            resena=produciones.resena
         )
 
 

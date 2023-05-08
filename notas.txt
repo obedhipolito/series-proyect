@@ -26,3 +26,31 @@ python3 manage.py test --settings=settings.local -v 3 --keepdb
 python3 manage.py shell --settings=settings.local
 from producciones.models import Produccion
 Produccion.objects.create(nombre='los simpson', temporadas=32, capitulos=706, duracion=21180, clasificacion='mayores de 14 años', categoria='comedia', idioma='español e ingles', plataforma='start +', director='Matt Groening', protagonista='homero simpson')
+
+mutation{
+  createProducciones(
+    capitulos: 12,
+    categoria:"familiar",
+    clasificacion: "a"
+    director: "obed",
+    duracion: 30
+    idioma: "español",
+    nombre: "obed",
+    plataforma: "netflix",
+    protagonista: "obed",
+    temporadas: 3
+  )
+{
+  id
+  capitulos
+  categoria
+  clasificacion
+  director
+  duracion
+  idioma
+  nombre
+  plataforma
+  protagonista
+  temporadas
+}
+}

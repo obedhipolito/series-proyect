@@ -12,3 +12,4 @@ class Produccion(models.Model):
     plataforma = models.TextField(default='', blank=False)
     director = models.TextField(default='', blank=False)
     protagonista = models.TextField(default='', blank=False)
+    resena = models.TextField(default='', blank=False)

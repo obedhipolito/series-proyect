@@ -22,6 +22,7 @@ PRODUCCION_QUERY = '''{
         plataforma
         director
         protagonista
+        resena
     }
 }
 '''
