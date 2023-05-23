@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'series.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'series_develop',
+        'NAME': 'series_local',
         'USER': 'obedhipolito',
         'PASSWORD': 'jose0710',
         'HOST': 'localhost',
