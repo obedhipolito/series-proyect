@@ -5,6 +5,13 @@ metadata:
  labels:
    app: postgres
 data:
+ DEV_SECRET_KEY: db-obed
+ DEV_DATABASE: dtjfhtal
+ DEV_USER: dtjfhtal
+ DEV_PASSWORD: sWhEF6hsNSBJUEw1OFLpzEMDV4nke5zb
+ DEV_HOST: isilo.db.elephantsql.com 
+ DEV_PORT: "5432"
+
  PROD_SECRET_KEY: db-obed
  PROD_DATABASE: dtjfhtal
  PROD_USER: dtjfhtal
